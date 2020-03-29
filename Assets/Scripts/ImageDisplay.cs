@@ -8,12 +8,12 @@ public class ImageDisplay : MonoBehaviour
 {
     public Sprite[] images;
     public Image display;
+    private int position;
 
-    private int count;
-    // Start is called before the first frame update
+
     void Start()
     {
-        count = 0;
+        position = 0;
         if(SceneManager.GetActiveScene().name!="MainMenu")
         Next();
     }
@@ -21,26 +21,26 @@ public class ImageDisplay : MonoBehaviour
     public void Next()
     {
         
-            display.sprite = images[count];
+            display.sprite = images[position];
             display.SetNativeSize();
             display.preserveAspect = true;
         
 
-        if (count < images.Length - 1)
-            count++;
+        if (position < images.Length - 1)
+            position++;
         else
-            count = 0;
+            position = 0;
 
     }
 
     public void Back()
     {
-        if (count - 1 >= 0)
-            count--;
+        if (position - 1 >= 0)
+            position--;
         else
-            count = images.Length - 1;
+            position = images.Length - 1;
 
-        display.sprite = images[count];
+        display.sprite = images[position];
             display.SetNativeSize();
             display.preserveAspect = true;
                 
