@@ -14,7 +14,6 @@ public class ImageDisplay : MonoBehaviour
     void Start()
     {
         position = 0;
-        if(SceneManager.GetActiveScene().name!="MainMenu")
         Next();
     }
 
@@ -46,16 +45,6 @@ public class ImageDisplay : MonoBehaviour
                 
     }
 
-    public void SceneManage(int stressLevel)
-    {
-        if (stressLevel == 0)
-            SceneManager.LoadScene("MainMenu");
-        else if (stressLevel == 1)
-            SceneManager.LoadScene("Level1");
-        else if (stressLevel == 2)
-            SceneManager.LoadScene("Level2");
-        else if (stressLevel == 3)
-            SceneManager.LoadScene("Level3");
-    }
+  
 
 }
