@@ -7,7 +7,7 @@ public class Coon : MonoBehaviour
     //The purpose of this script is to control the behaviour of the raccoons
     private Animator anim;
     public AudioClip die;
-
+    public GameObject trash;
     public GameObject [] waypoint;
 
     private GameObject target;
@@ -59,9 +59,15 @@ public class Coon : MonoBehaviour
             audio.clip = die;
             audio.Play();
             disableColliders();
-
-
+            Invoke("makeTrash", 0.5f);
+         //   Destroy(gameObject.transform.parent.gameObject);
         }
+    }
+
+    private void makeTrash()
+    {
+        Instantiate(trash, gameObject.transform.parent.transform);
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

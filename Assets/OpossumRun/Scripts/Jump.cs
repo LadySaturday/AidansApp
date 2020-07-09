@@ -14,7 +14,7 @@ public class Jump : MonoBehaviour
     public AudioClip die;
     public AudioClip jump;
     public AudioClip pickup;
-    private int trash;
+    public int trash;
 
     private new AudioSource audio;
     public GameObject trashDisplay;
@@ -70,6 +70,11 @@ public class Jump : MonoBehaviour
         }
         else if (collision.gameObject.tag=="Coon")
             StartCoroutine(death());
+        else if (collision.gameObject.tag == "Win")
+        {
+            //stop scrolling
+            //count trash
+        }
 
     }
 

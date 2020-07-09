@@ -7,7 +7,6 @@ public class DialogManager : MonoBehaviour
 {
     public Text [] textDisplay;
     private string sentences;
-    private int index;
     public float typingSpeed;
     public GameObject [] dialogPanel;
     public bool okToPass;
@@ -29,7 +28,6 @@ public class DialogManager : MonoBehaviour
         
         sentences = null;
         textDisplay[nicOrAid].text = "";
-        index = 0;
 
         dialogPanel[nicOrAid].SetActive(false);
     }

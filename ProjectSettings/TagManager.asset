@@ -12,6 +12,7 @@ TagManager:
   - collect
   - Coon
   - stomp
+  - FinalScore
   layers:
   - Default
   - TransparentFX

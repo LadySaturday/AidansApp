@@ -27,7 +27,7 @@ public class IntroTexts : MonoBehaviour
 
             if (transform.position.x == 10)
             {
-                SceneLoading.SceneManage(4);
+                SceneLoading.SceneManageEnd(3);
             }
         }
         
