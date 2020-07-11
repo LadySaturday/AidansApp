@@ -10,7 +10,7 @@ public class End : MonoBehaviour
         if (collision.tag == "Player")
         {
             
-            SceneLoading.SceneManageEnd(10);
+            SceneLoading.SceneManageStatic("PossumRun_End");
    
         }
     }

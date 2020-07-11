@@ -12,9 +12,9 @@ public class trash : MonoBehaviour
     void Update()
     {
         if(GameObject.FindGameObjectWithTag("Player")!=null)
-        trashCount = GameObject.FindGameObjectWithTag("Player").GetComponent<Jump>().trash;
+        trashCount = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().trash;
 
-        if(SceneManager.GetActiveScene().name=="WinScene")
+        if(SceneManager.GetActiveScene().name=="PossumRun_Win")
         {
             GameObject.FindGameObjectWithTag("FinalScore").GetComponent<Text>().text =trashCount.ToString();
         }

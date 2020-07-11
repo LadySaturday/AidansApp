@@ -66,7 +66,7 @@ public class Coon : MonoBehaviour
 
     private void makeTrash()
     {
-        Instantiate(trash, gameObject.transform.parent.transform);
+        Instantiate(trash, (gameObject.transform.parent.transform));
 
     }
 

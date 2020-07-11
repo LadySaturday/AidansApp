@@ -10,7 +10,6 @@ public class LandScroll : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("start");
         gameObject.transform.position = new Vector2(0, 0);
         offset = new Vector2(0, 0);
     }

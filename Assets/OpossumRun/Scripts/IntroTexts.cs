@@ -27,7 +27,7 @@ public class IntroTexts : MonoBehaviour
 
             if (transform.position.x == 10)
             {
-                SceneLoading.SceneManageEnd(3);
+                SceneLoading.SceneManageStatic("PossumRun");
             }
         }
         
@@ -36,7 +36,7 @@ public class IntroTexts : MonoBehaviour
     IEnumerator introSequence()
     {
         yield return new WaitForSeconds(2);
-        dialog.ShowDialog("Ah jeez, Aidan. It sure is nice to be a trash rat!", 0);
+        dialog.ShowDialog("Ah jeez, Aidan. It sure is nice to be a trash cat!", 0);
         yield return new WaitUntil(() => dialog.okToPass == true);//waits until sentence is over
         dialog.ShowDialog("It sure is!", 1);
         yield return new WaitUntil(() => dialog.okToPass == true);//waits until sentence is over
